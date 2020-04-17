@@ -27,10 +27,10 @@ export class SessionListComponent implements OnChanges {
     }
 
     toggleVote(session:ISession){
-        if(this.userHasVoted(session)){ console.log("voted")
+        if(this.userHasVoted(session)){
             this.voterService.deleteVoter(session, this.authService.currentUser.userName)
             console.log(this.userHasVoted(session))
-        } else { console.log("not voted")
+        } else {
             this.voterService.addVoter(session, this.authService.currentUser.userName)
         }
         if(this.sortBy === 'vote'){
