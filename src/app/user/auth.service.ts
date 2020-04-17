@@ -4,7 +4,7 @@ import { IUser } from './user.model';
 @Injectable()
 export class AuthService {
     currentUser: IUser
-    loginUser(userName:String, password:String){
+    loginUser(userName:string, password:string){
         this.currentUser ={
             id: 1,
             firstName: "John",
@@ -17,7 +17,7 @@ export class AuthService {
         return !!this.currentUser;
     }
 
-    updateUser(firstName:String, lastName:String){
+    updateUser(firstName:string, lastName:string){
         this.currentUser.firstName = firstName
         this.currentUser.lastName = lastName
     }
